@@ -264,7 +264,7 @@ function App() {
       <nav className="navbar">
         <div className="navbar-inner">
           <div className="nav-brand" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-            <img src={logo} alt="SkyVoyage" className="nav-brand-logo" />
+            <img src={logo} alt="SkyScanner" className="nav-brand-logo" />
             <div className="nav-brand-text">
               SkyScanner <span className="nav-brand-badge">Premium</span>
             </div>
@@ -1132,7 +1132,7 @@ function App() {
         <div className="main-container">
           <div className="section-header" style={{ textAlign: 'center', justifyContent: 'center' }}>
             <div className="section-title-wrap" style={{ textAlign: 'center' }}>
-              <span className="section-tag">The SkyVoyage Advantage</span>
+              <span className="section-tag">The SkyScanner Advantage</span>
               <h2 className="section-heading">Why Millions of Travelers Fly With Us</h2>
               <p className="section-desc">We build every feature with simplicity, transparency, and top-tier reliability.</p>
             </div>
@@ -1267,8 +1267,8 @@ function App() {
           <div className="footer-columns-grid">
             <div className="footer-brand-col">
               <div className="nav-brand" style={{ cursor: 'default' }}>
-                <img src={logo} alt="SkyVoyage" className="nav-brand-logo" />
-                <span className="nav-brand-text">SkyVoyage</span>
+                <img src={logo} alt="SkyScanner" className="nav-brand-logo" />
+                <span className="nav-brand-text">SkyScanner</span>
               </div>
               <p className="footer-tagline">
                 India's next-generation travel platform delivering guaranteed best airfares, zero cancellation fee protection, and 24/7 dedicated support.
@@ -1293,7 +1293,7 @@ function App() {
             <div>
               <h4 className="footer-heading">Company & Help</h4>
               <ul className="footer-links-list">
-                <li className="footer-link-item" onClick={() => triggerToast('About SkyVoyage page')}>About Us</li>
+                <li className="footer-link-item" onClick={() => triggerToast('About SkyScanner page')}>About Us</li>
                 <li className="footer-link-item" onClick={() => triggerToast('SkyShield policy details')}>SkyShield Zero Cancellation</li>
                 <li className="footer-link-item" onClick={() => triggerToast('24/7 Concierge Support')}>24/7 WhatsApp Concierge</li>
                 <li className="footer-link-item" onClick={() => triggerToast('Partner airline guidelines')}>Airlines Baggage Guide</li>
@@ -1309,13 +1309,13 @@ function App() {
               <div style={{ display: 'flex', flexDirection: 'column', gap: 6, fontSize: 13, color: '#38bdf8', fontWeight: 600 }}>
                 <span>📞 +91 1800-SKY-VOYAGE</span>
                 <span>💬 WhatsApp: +91 99887 76655</span>
-                <span>✉️ support@skyvoyage.com</span>
+                <span>✉️ support@skySca.com</span>
               </div>
             </div>
           </div>
 
           <div className="footer-bottom-bar">
-            <span>© 2026 SkyVoyage Technologies Ltd. All rights reserved.</span>
+            <span>© 2026 SkyScanner Technologies Ltd. All rights reserved.</span>
             <div style={{ display: 'flex', gap: 20 }}>
               <span style={{ cursor: 'pointer' }}>Terms of Service</span>
               <span style={{ cursor: 'pointer' }}>Security</span>

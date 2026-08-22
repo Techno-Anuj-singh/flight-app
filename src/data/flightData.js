@@ -323,7 +323,7 @@ export const PROMO_OFFERS = [
     id: 'promo-3',
     code: 'FIRSTFLIGHT',
     title: 'Flat ₹1,000 OFF on First Booking',
-    desc: 'New to SkyVoyage? Use this code and enjoy instant reduction on your airfare.',
+    desc: 'New to SkyScanner? Use this code and enjoy instant reduction on your airfare.',
     discount: '₹1,000 OFF',
     discountAmount: 1000,
     expiry: 'Valid all year',
