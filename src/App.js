@@ -1307,7 +1307,7 @@ function App() {
                 Need urgent flight assistance or instant reschedule? Our human concierge team is always online.
               </p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 6, fontSize: 13, color: '#38bdf8', fontWeight: 600 }}>
-                <span>📞 +91 1800-SKY-VOYAGE</span>
+                <span>📞 +91 1800-SKY-SCANNER</span>
                 <span>💬 WhatsApp: +91 99887 76655</span>
                 <span>✉️ support@skySca.com</span>
               </div>
@@ -1315,7 +1315,7 @@ function App() {
           </div>
 
           <div className="footer-bottom-bar">
-            <span>© 2026 SkyScanner Technologies Ltd. All rights reserved.</span>
+            <span>© 2026 SkyScanner Technologies Ltd. All rights reserved. Demo designed by Anuj Singh</span>
             <div style={{ display: 'flex', gap: 20 }}>
               <span style={{ cursor: 'pointer' }}>Terms of Service</span>
               <span style={{ cursor: 'pointer' }}>Security</span>

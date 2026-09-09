@@ -441,7 +441,7 @@ export const PASSENGER_REVIEWS = [
     rating: 5,
     route: 'Delhi → Mumbai (Vistara UK 995)',
     avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80',
-    comment: 'SkyVoyage made my corporate travel effortless! Got an instant seat upgrade, free meal, and the boarding pass was downloaded with 1-click. Absolutely silky smooth experience.',
+    comment: 'SkyScanner made my corporate travel effortless! Got an instant seat upgrade, free meal, and the boarding pass was downloaded with 1-click. Absolutely silky smooth experience.',
     date: '2 days ago'
   },
   {
@@ -481,7 +481,7 @@ export const FAQS = [
   },
   {
     question: 'Can I apply bank offers and promo codes together?',
-    answer: 'Yes! SkyVoyage allows coupon codes (e.g. FLYINDIA) to be stacked alongside instant card discounts from partner banks like Axis Bank, HDFC, and ICICI during checkout.'
+    answer: 'Yes! SkyScanner allows coupon codes (e.g. FLYINDIA) to be stacked alongside instant card discounts from partner banks like Axis Bank, HDFC, and ICICI during checkout.'
   },
   {
     question: 'How does the Live Flight Status tracker work?',
