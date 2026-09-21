@@ -280,8 +280,7 @@ function App() {
             <button
               className={`nav-link ${activeNavTab === 'hotels' ? 'active' : ''}`}
               onClick={() => {
-                setActiveNavTab('hotels');
-                triggerToast('🏨 Hotels search coming in next update! Showing top flight routes.');
+               window.location.href = 'https://wanderlust-9qdh.onrender.com/listings';
               }}
             >
               <Globe size={16} /> Hotels
