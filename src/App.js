@@ -77,8 +77,8 @@ function App() {
   // Modals & Booking Flow
   const [bookingFlight, setBookingFlight] = useState(null);
   const [passengerForm, setPassengerForm] = useState({
-    fullName: 'Rahul Sharma',
-    email: 'rahul.sharma@example.com',
+    fullName: 'Kabir Singh',
+    email: 'anuj.singh@example.com',
     phone: '+91 98765 43210',
     idNumber: 'A1234567'
   });
@@ -277,14 +277,12 @@ function App() {
             >
               <Plane size={16} /> Flights
             </button>
-            <button
-              className={`nav-link ${activeNavTab === 'hotels' ? 'active' : ''}`}
-              onClick={() => {
-               window.location.href = 'https://wanderlust-9qdh.onrender.com/listings';
-              }}
-            >
+            <a
+              href="https://wanderlust-9qdh.onrender.com"
+              className="nav-link"
+              >
               <Globe size={16} /> Hotels
-            </button>
+            </a>
             <button
               className={`nav-link ${activeNavTab === 'holidays' ? 'active' : ''}`}
               onClick={() => {
