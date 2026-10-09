@@ -33,6 +33,7 @@ import {
 import logo from './logo.png';
 import '@skyscanner/backpack-web/bpk-stylesheets';
 import './App.scss';
+import Chatbot from './Chatbot';
 
 import {
   AIRPORTS,
@@ -66,6 +67,11 @@ function App() {
   const [passengers, setPassengers] = useState({ adults: 1, children: 0, infants: 0 });
   const [cabinClass, setCabinClass] = useState('Economy');
   const [specialFare, setSpecialFare] = useState('regular');
+
+  // Backend flight search state
+  const [apiFlights, setApiFlights] = useState(null);
+  const [searchLoading, setSearchLoading] = useState(false);
+  const [searchError, setSearchError] = useState('');
 
   // Results, Filter & Sort State
   const [sortBy, setSortBy] = useState('cheapest');
@@ -116,6 +122,33 @@ function App() {
       setToastMessage((prev) => (prev === msg ? null : prev));
     }, 3500);
   };
+
+// Search flights using the backend
+const handleSearchFlights = async () => {
+  setSearchLoading(true);
+  setSearchError('');
+
+  try {
+    const response = await fetch(
+      `http://localhost:5000/api/flights?from=${fromAirport.code}&to=${toAirport.code}&departureDate=${departureDate}`
+    );
+
+    if (!response.ok) {
+      throw new Error('Failed to fetch flights');
+    }
+
+    const data = await response.json();
+    setApiFlights(data.flights || []);
+
+    triggerToast('Flight search completed!');
+  } catch (error) {
+    setSearchError(
+      'Unable to connect to the backend. Make sure your backend server is running.'
+    );
+  } finally {
+    setSearchLoading(false);
+  }
+};
 
   // Swap Airports with Animation
   const handleSwapAirports = () => {
@@ -722,8 +755,9 @@ function App() {
               <button
                 type="button"
                 className="search-submit-btn"
-                onClick={() => {
-                  triggerToast(`Searching flights for ${fromAirport.code} → ${toAirport.code}...`);
+                onClick={async () => {
+                  await handleSearchFlights();
+
                   const el = document.getElementById('flights-results-section');
                   el?.scrollIntoView({ behavior: 'smooth' });
                 }}
@@ -1782,8 +1816,8 @@ function App() {
           <span>{toastMessage}</span>
         </div>
       )}
+      <Chatbot />
     </div>
   );
 }
-
 export default App;
