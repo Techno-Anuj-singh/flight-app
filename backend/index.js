@@ -4,7 +4,7 @@ dns.setServers(["8.8.8.8", "1.1.1.1"]);
 require("dotenv").config();
 
 const bcrypt = require("bcryptjs");
-const User = require("./models/user");
+const User = require("./models/User");
 const mongoose = require("mongoose");
 const express = require("express");
 const cors = require("cors");
