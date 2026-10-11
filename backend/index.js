@@ -16,15 +16,6 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-mongoose
-  .connect(process.env.MONGODB_URI)
-  .then(() => {
-    console.log("MongoDB Atlas connected successfully!");
-  })
-  .catch((error) => {
-  console.error("MongoDB connection error:", error.message);
-});
-
 // Initialize Gemini AI
 const ai = new GoogleGenAI({
   apiKey: process.env.GEMINI_API_KEY,
@@ -224,6 +215,19 @@ app.post("/api/auth/login", async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`Backend running at http://localhost:${PORT}`);
-});
+async function startServer() {
+  try {
+    await mongoose.connect(process.env.MONGODB_URI);
+
+    console.log("MongoDB Atlas connected successfully!");
+
+    app.listen(PORT, "0.0.0.0", () => {
+      console.log(`Backend running on port ${PORT}`);
+    });
+  } catch (error) {
+    console.error("MongoDB connection error:", error.message);
+    process.exit(1);
+  }
+}
+
+startServer();
