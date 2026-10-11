@@ -34,6 +34,7 @@ import logo from './logo.png';
 import '@skyscanner/backpack-web/bpk-stylesheets';
 import './App.scss';
 import Chatbot from './Chatbot';
+import Auth from './pages/Auth';
 
 import {
   AIRPORTS,
@@ -52,6 +53,7 @@ function App() {
   const [activeNavTab, setActiveNavTab] = useState('flights');
   const [currency, setCurrency] = useState('INR');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [showAuth, setShowAuth] = useState(false);
 
   // Search Engine State
   const [tripType, setTripType] = useState('oneway');
@@ -258,7 +260,9 @@ function App() {
     }
   };
 
-  return (
+    return showAuth ? (
+    <Auth onBack={() => setShowAuth(false)} />
+    ) : (
     <div className="app-wrapper">
       {/* Background Decor */}
       <div className="hero-backdrop-layer" />
@@ -325,6 +329,16 @@ function App() {
                 </option>
               ))}
             </select>
+
+            <button
+              type="button"
+              className="Authentication"
+              onClick={() => setShowAuth(true)}
+            >
+              Login / Sign up
+             </button>
+
+
 
             <button
               className="btn-ghost"

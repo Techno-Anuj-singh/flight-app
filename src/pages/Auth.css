@@ -1,0 +1,144 @@
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: linear-gradient(135deg, #eaf3ff, #f8fbff);
+  box-sizing: border-box;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 36px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(22, 66, 120, 0.12);
+  box-sizing: border-box;
+}
+
+.auth-card h1 {
+  margin: 0 0 10px;
+  color: #102b4e;
+  font-size: 30px;
+  text-align: center;
+}
+
+.auth-subtitle {
+  margin: 0 0 28px;
+  color: #65758b;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.auth-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.auth-field label {
+  color: #243b53;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.auth-field input {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #d5dfeb;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.auth-field input:focus {
+  border-color: #0877e8;
+  box-shadow: 0 0 0 3px rgba(8, 119, 232, 0.12);
+}
+
+.auth-submit {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: #0877e8;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.auth-submit:hover {
+  background: #075fc0;
+}
+
+.auth-submit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.auth-message {
+  margin-top: 18px;
+  color: #243b53;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.auth-switch {
+  margin: 24px 0 0;
+  color: #65758b;
+  text-align: center;
+  font-size: 14px;
+}
+
+.auth-switch-button {
+  border: none;
+  background: none;
+  color: #0877e8;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: inherit;
+}
+
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 26px 20px;
+  }
+
+  .auth-card h1 {
+    font-size: 26px;
+  }
+}
+
+.auth-back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 22px;
+  padding: 10px 14px;
+  border: 1px solid #dbe7f5;
+  border-radius: 10px;
+  background: #f4f8ff;
+  color: #0877e8;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.auth-back-button:hover {
+  background: #e5f0ff;
+  border-color: #0877e8;
+  transform: translateX(-2px);
+}
+
+.auth-back-button:focus-visible {
+  outline: 3px solid rgba(8, 119, 232, 0.25);
+  outline-offset: 3px;
+}
