@@ -260,22 +260,26 @@ body {
 .Authentication {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  background: rgba(255, 255, 255, 0.06);
-  color: var(--text-main);
-  border: 1px solid var(--border-glass);
-  padding: 8px 16px;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 100%);
+  color: #ffffff;
+  border: none;
+  padding: 10px 22px;
   border-radius: var(--radius-full);
-  font-size: 13px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 700;
   cursor: pointer;
-  transition: all 0.2s ease;
+  box-shadow: 0 4px 15px rgba(2, 132, 199, 0.35);
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .Authentication:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.25);
-  transform: translateY(-1px);
+  background: linear-gradient(135deg, #0369a1 0%, #0284c7 100%);
+  box-shadow: 0 6px 20px rgba(56, 189, 248, 0.5);
+  transform: translateY(-2px);
 }
 
 .btn-ghost {
@@ -302,26 +306,22 @@ body {
 .btn-primary {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 8px;
-  background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 100%);
-  color: #ffffff;
-  border: none;
-  padding: 10px 22px;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text-main);
+  border: 1px solid var(--border-glass);
+  padding: 8px 16px;
   border-radius: var(--radius-full);
-  font-size: 14px;
-  font-weight: 700;
+  font-size: 13px;
+  font-weight: 600;
   cursor: pointer;
-  box-shadow: 0 4px 15px rgba(2, 132, 199, 0.35);
-  transition: all 0.25s ease;
-  position: relative;
-  overflow: hidden;
+  transition: all 0.2s ease;
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #0369a1 0%, #0284c7 100%);
-  box-shadow: 0 6px 20px rgba(56, 189, 248, 0.5);
-  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-1px);
 }
 
 .btn-primary:active {
@@ -2065,11 +2065,38 @@ body {
   .navbar {
     padding: 0 16px;
   }
-  .nav-menu, .nav-actions .currency-select, .nav-actions .btn-ghost {
-    display: none;
+  
+.nav-menu,
+.nav-actions .currency-select,
+.nav-actions .btn-ghost {
+  display: none;
+}
+
+.nav-actions .btn-primary {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 8px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
-  .mobile-toggle-btn {
-    display: block;
+
+  .nav-actions .Authentication {
+    order: 1;
+    white-space: nowrap;
+  }
+
+  .nav-actions .mobile-toggle-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    order: 2;
+    flex-shrink: 0;
   }
   .search-inputs-grid {
     grid-template-columns: 1fr;
@@ -2101,5 +2128,54 @@ body {
   }
   .newsletter-card {
     padding: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-brand-text {
+    display: none;
+  }
+
+  .navbar-inner {
+    justify-content: center;
+  }
+}
+
+/* Navbar layout */
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-width: 0;
+}
+
+.nav-brand {
+  flex-shrink: 0;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+/* Keep Login after My Bookings */
+.nav-actions .Authentication {
+  order: 4;
+}
+
+.nav-actions .mobile-toggle-btn {
+  order: 5;
+}
+
+@media (max-width: 768px) {
+  .nav-brand-text {
+    display: none;
+  }
+
+  .nav-actions {
+    gap: 6px;
   }
 }

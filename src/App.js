@@ -331,16 +331,6 @@ function App() {
             </select>
 
             <button
-              type="button"
-              className="Authentication"
-              onClick={() => setShowAuth(true)}
-            >
-              Login / Sign up
-             </button>
-
-
-
-            <button
               className="btn-ghost"
               onClick={() => {
                 setShowStatusModal(true);
@@ -356,6 +346,14 @@ function App() {
             >
               <Luggage size={16} /> My Bookings {myBookingsList.length > 0 && `(${myBookingsList.length})`}
             </button>
+
+            <button
+              type="button"
+              className="Authentication"
+              onClick={() => setShowAuth(true)}
+            >
+              Login / Sign up
+             </button>
 
             <button
               className="mobile-toggle-btn"
